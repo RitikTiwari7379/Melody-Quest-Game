@@ -2,11 +2,14 @@
 
 A rhythm-based music game built for the #NoCodeJam, featuring falling notes, combo systems, and progressive difficulty. Tap notes in sequence to build combos and achieve high scores!
 
-Responsive                     |  Desktop
-:-------------------------:|:-------------------------:
-![](<img width="295" height="756" alt="e65337964d9cda6988333c2f22a4f0b5a34f75da15a6c0833cbfc02fdc874f8a" src="https://github.com/user-attachments/assets/25e7a7ec-668f-4fb1-8cb4-0664817fa5c6" />
-)  |  ![](<img width="1464" height="840" alt="77845a2c0e2fb0fec222084f975348cb371518bb6e9923db7388c5304b0ddec3" src="https://github.com/user-attachments/assets/27b0e8ba-c78e-4bc7-a484-0c96852e31f9" />
-)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/25e7a7ec-668f-4fb1-8cb4-0664817fa5c6" alt="Responsive View" width="295" height="756" />
+  <img src="https://github.com/user-attachments/assets/27b0e8ba-c78e-4bc7-a484-0c96852e31f9" alt="Desktop View" width="732" height="420" />
+</p>
+
+<p align="center">
+  <em>Responsive (Mobile) View &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Desktop View</em>
+</p>
 
 ## 🎮 Game Features
 
