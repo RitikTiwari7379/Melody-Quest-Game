@@ -6,9 +6,6 @@ A rhythm-based music game built for the #NoCodeJam, featuring falling notes, com
   <img src="https://github.com/user-attachments/assets/25e7a7ec-668f-4fb1-8cb4-0664817fa5c6" alt="Responsive View" width="295" height="756" />
   <img src="https://github.com/user-attachments/assets/27b0e8ba-c78e-4bc7-a484-0c96852e31f9" alt="Desktop View" width="732" height="420" />
 </p>
-
-<p align="center">
-  <em>Responsive (Mobile) View &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Desktop View</em>
 </p>
 
 ## 🎮 Game Features
