@@ -685,7 +685,7 @@ const GameSandbox: FC = () => {
         {/* Instructions */}
         <div className="px-3 py-2 text-center bg-black/20 backdrop-blur-sm rounded-b-2xl border-t border-white/10">
           <p className="text-[10px] text-cyan-300/70">
-            Build combos for bonus • Don't miss correct notes! • Level{" "}
+            Build combos for bonus • Don&apos;t miss correct notes! • Level{" "}
             {Math.ceil((level + 1) / 4) * 4}: Lives restore
           </p>
         </div>
