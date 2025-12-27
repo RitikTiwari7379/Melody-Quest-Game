@@ -1,19 +1,55 @@
+# Melody Quest - Scrolly Game Jam Edition
 
-# Solana dApp Scaffold Next
-
-The Solana dApp Scaffold repos are meant to house good starting scaffolds for ecosystem developers to get up and running quickly with a front end client UI that integrates several common features found in dApps with some basic usage examples. Wallet Integration. State management. Components examples. Notifications. Setup recommendations.
+A rhythm-based music game built for the #NoCodeJam, featuring falling notes, combo systems, and progressive difficulty. Tap notes in sequence to build combos and achieve high scores!
 
 Responsive                     |  Desktop
 :-------------------------:|:-------------------------:
-![](scaffold-mobile.png)  |  ![](scaffold-desktop.png)
+![](<img width="295" height="756" alt="e65337964d9cda6988333c2f22a4f0b5a34f75da15a6c0833cbfc02fdc874f8a" src="https://github.com/user-attachments/assets/25e7a7ec-668f-4fb1-8cb4-0664817fa5c6" />
+)  |  ![](<img width="1464" height="840" alt="77845a2c0e2fb0fec222084f975348cb371518bb6e9923db7388c5304b0ddec3" src="https://github.com/user-attachments/assets/27b0e8ba-c78e-4bc7-a484-0c96852e31f9" />
+)
 
-## Getting Started
+## 🎮 Game Features
+
+- **Progressive Difficulty**: 9 levels with increasing speed and complexity
+- **Combo System**: Build combos for score multipliers (every 5 combo = 2x points)
+- **Life System**: Start with 3 hearts, lives restore every 4th level
+- **Dynamic Music**: Adventure-style background music with chord progressions
+- **Visual Feedback**: Real-time feedback for correct/wrong notes
+- **Score Tracking**: High score persistence across sessions
+
+## 🛠️ Technologies Used
+
+### Core Framework & Language
+- **Next.js** (v13.1.5) - React framework for production
+- **React** (v18.2.0) - UI library
+- **TypeScript** (v4.9.4) - Type-safe JavaScript
+
+### Styling
+- **Tailwind CSS** (v3.2.4) - Utility-first CSS framework
+- **DaisyUI** (v1.24.3) - Component library
+- **PostCSS** & **Autoprefixer** - CSS processing
+
+### Audio
+- **Web Audio API** - Native browser audio synthesis for music and sound effects
+
+### Blockchain Integration (Scaffold Base)
+- **@solana/web3.js** (v1.73.0) - Solana JavaScript SDK
+- **@solana/wallet-adapter-react** - Wallet integration
+- **@solana/wallet-adapter-wallets** - Wallet implementations
+
+### State Management
+- **Zustand** (v3.6.9) - Lightweight state management
+- **Immer** (v9.0.12) - Immutable state updates
+
+### Other Dependencies
+- **@heroicons/react** - Icon library
+- **date-fns** - Date utility library
+
+## 🚀 Getting Started
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-The responsive version for wallets and wallet adapter may not function or work as expected for mobile based on plugin and wallet compatibility. For more code examples and implementations please visit the [Solana Cookbook](https://solanacookbook.com/)
-
-## Installation
+### Installation
 
 ```bash
 npm install
@@ -21,9 +57,9 @@ npm install
 yarn install
 ```
 
-## Build and Run
+### Build and Run
 
-Next, run the development server:
+Run the development server:
 
 ```bash
 npm run dev
@@ -33,95 +69,109 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+You can start editing the game by modifying `src/views/home/index.tsx`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## 🎯 How to Play
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+1. **Start Quest**: Click to begin the game
+2. **Tap Notes**: Falling notes will appear - tap the ones that match your sequence
+3. **Build Combos**: Hit consecutive correct notes to build combos
+   - Every 5 combo grants 2x score multiplier
+   - Higher combos = higher multipliers!
+4. **Watch Your Hearts**: Missing correct notes costs lives
+5. **Level Progression**: Complete sequences to advance
+   - Lives restore every 4th level
+   - Speed increases with each level
+6. **Win Condition**: Complete all 9 levels to win!
 
-## Features
+## 📁 Project Structure
 
-Each Scaffold will contain at least the following features:
-
-```
-Wallet Integration with Auto Connec / Refresh
-
-State Management
-
-Components: One or more components demonstrating state management
-
-Web3 Js: Examples of one or more uses of web3 js including a transaction with a connection provider
-
-Sample navigation and page changing to demonstate state
-
-Clean Simple Styling 
-
-Notifications (optional): Example of using a notification system
-
-```
-
-A Solana Components Repo will be released in the near future to house a common components library.
-
-
-### Structure
-
-The scaffold project structure may vary based on the front end framework being utilized. The below is an example structure for the Next js Scaffold.
- 
 ```
 ├── public : publically hosted files
 ├── src : primary code folders and files 
-│   ├── components : should house anything considered a resuable UI component
-│   ├── contexts` : any context considered reusable and useuful to many compoennts that can be passed down through a component tree
-│   ├── hooks` : any functions that let you 'hook' into react state or lifecycle features from function components
-│   ├── models` : any data structure that may be reused throughout the project
-│   ├── pages` : the pages that host meta data and the intended `View` for the page
-│   ├── stores` : stores used in state management
-│   ├── styles` : contain any global and reusable styles
-│   ├── utils` : any other functionality considered reusable code that can be referenced
-│   ├── views` : contains the actual views of the project that include the main content and components within
-style, package, configuration, and other project files
-
+│   ├── components : reusable UI components (AppBar, Footer, etc.)
+│   ├── contexts : context providers for state management
+│   ├── hooks : custom React hooks
+│   ├── models : data structure definitions
+│   ├── pages : Next.js pages with meta data
+│   ├── stores : Zustand stores for state management
+│   ├── styles : global and reusable styles
+│   ├── utils : reusable utility functions
+│   ├── views : main content views (HomeView with GameSandbox)
+├── package.json : project dependencies
+├── tsconfig.json : TypeScript configuration
+└── tailwind.config.js : Tailwind CSS configuration
 ```
 
-## Contributing
+### Game Logic Location
 
-Anyone is welcome to create an issue to build, discuss or request a new feature or update to the existing code base. Please keep in mind the following when submitting an issue. We consider merging high value features that may be utilized by the majority of scaffold users. If this is not a common feature or fix, consider adding it to the component library or cookbook. Please refer to the project's architecture and style when contributing. 
+The main game component is located at: `src/views/home/index.tsx`
 
-If submitting a feature, please reference the project structure shown above and try to follow the overall architecture and style presented in the existing scaffold.
+- **GameSandbox**: Core game logic and UI (lines 73-615)
+- Only edit the `GameSandbox` component for game modifications
+- Keep the `HomeView` wrapper unchanged for proper scaffolding
 
-### Committing
+### Build Configuration
 
-To choose a task or make your own, do the following:
+Vercel automatically detects:
+- **Build Command**: `npm run build`
+- **Output Directory**: `.next`
+- **Install Command**: `npm install`
 
-1. [Add an issue](https://github.com/solana-dev-adv/solana-dapp-next/issues/new) for the task and assign it to yourself or comment on the issue
-2. Make a draft PR referencing the issue.
+Check out the [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-The general flow for making a contribution:
+## 🎨 Customization
+
+### Modifying Game Logic
+
+Edit the `GameSandbox` component in `src/views/home/index.tsx`:
+
+```typescript
+const GameSandbox: FC = () => {
+  // Your game logic here
+  // Modify notes, levels, scoring, etc.
+}
+```
+
+### Styling Changes
+
+Update Tailwind classes directly in the component or modify:
+- `tailwind.config.js` - Theme configuration
+- `src/styles/globals.css` - Global styles
+
+## 🤝 Contributing
+
+Contributions are welcome! Please follow these steps:
 
 1. Fork the repo on GitHub
 2. Clone the project to your own machine
-3. Commit changes to your own branch
-4. Push your work back up to your fork
-5. Submit a Pull request so that we can review your changes
+3. Create a new branch for your feature
+4. Commit changes to your branch
+5. Push your work back to your fork
+6. Submit a Pull Request
 
-**NOTE**: Be sure to merge the latest from "upstream" before making a 
-pull request!
+**NOTE**: Be sure to merge the latest from "upstream" before making a pull request!
 
-You can find tasks on the [project board](https://github.com/solana-dev-adv/solana-dapp-next/projects/1) 
-or create an issue and assign it to yourself.
+## 📚 Learn More
 
+### Next.js Resources
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial
+- [Next.js GitHub repository](https://github.com/vercel/next.js/)
 
-## Learn More Next Js
+### Game Development Resources
+- [Web Audio API Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API)
+- [React Hooks Documentation](https://react.dev/reference/react)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
 
-To learn more about Next.js, take a look at the following resources:
+## 📄 License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This project is based on the Solana dApp Scaffold and is open source.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## 🏆 Credits
 
-## Deploy on Vercel
+Built for the #NoCodeJam using the Solana dApp Scaffold Next template.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Made with ❤️ for the Scrolly Game Jam
